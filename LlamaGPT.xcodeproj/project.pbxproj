@@ -10,6 +10,7 @@
 		4F303AA02AB1463B00A7F4FF /* ContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F303A9F2AB1463B00A7F4FF /* ContentMessageView.swift */; };
 		4F303AA22AB146F300A7F4FF /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F303AA12AB146F300A7F4FF /* MessageView.swift */; };
 		4F303AA42AB14D2000A7F4FF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F303AA32AB14D2000A7F4FF /* ChatView.swift */; };
+		4F303AA72AB1504000A7F4FF /* llama in Frameworks */ = {isa = PBXBuildFile; productRef = 4F303AA62AB1504000A7F4FF /* llama */; };
 		4F36AE0F2AAFDF1A005BB95D /* LlamaGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36AE0E2AAFDF1A005BB95D /* LlamaGPTApp.swift */; };
 		4F36AE112AAFDF1A005BB95D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36AE102AAFDF1A005BB95D /* ContentView.swift */; };
 		4F36AE132AAFDF1A005BB95D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36AE122AAFDF1A005BB95D /* Item.swift */; };
@@ -36,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F303AA72AB1504000A7F4FF /* llama in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +101,9 @@
 			dependencies = (
 			);
 			name = LlamaGPT;
+			packageProductDependencies = (
+				4F303AA62AB1504000A7F4FF /* llama */,
+			);
 			productName = LlamaGPT;
 			productReference = 4F36AE0B2AAFDF1A005BB95D /* LlamaGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +132,9 @@
 				Base,
 			);
 			mainGroup = 4F36AE022AAFDF1A005BB95D;
+			packageReferences = (
+				4F303AA52AB1504000A7F4FF /* XCRemoteSwiftPackageReference "llama.swift" */,
+			);
 			productRefGroup = 4F36AE0C2AAFDF1A005BB95D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -381,6 +389,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F303AA52AB1504000A7F4FF /* XCRemoteSwiftPackageReference "llama.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexrozanski/llama.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F303AA62AB1504000A7F4FF /* llama */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F303AA52AB1504000A7F4FF /* XCRemoteSwiftPackageReference "llama.swift" */;
+			productName = llama;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F36AE032AAFDF1A005BB95D /* Project object */;
 }
