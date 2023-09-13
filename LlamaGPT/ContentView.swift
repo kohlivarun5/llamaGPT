@@ -46,8 +46,8 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
+            //let newItem = Item(timestamp: Date())
+            //modelContext.insert(newItem)
         }
     }
 
