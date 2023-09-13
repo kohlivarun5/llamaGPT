@@ -14,8 +14,8 @@ struct ContentMessageView: View {
   var body: some View {
     Text(contentMessage)
       .padding(10)
-      .foregroundColor(isPrompt ? Color.white : Color.black)
-      .background(isPrompt ? Color.orange : Color.secondary)
+      .background(isPrompt ? Color.orange : Color.primary)
+      .foregroundColor(isPrompt ? Color.primary : Color.orange)
       .cornerRadius(10)
   }
 }

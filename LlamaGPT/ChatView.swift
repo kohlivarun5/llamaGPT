@@ -19,8 +19,11 @@ struct ChatView: View {
         List {
           ForEach(items, id: \.self.timestamp) { item in
             MessageView(item: item)
+              .listRowSeparator(.hidden)
           }
         }
+        
+        .listStyle(.plain)
         HStack {
           TextField(
             "",
