@@ -75,7 +75,7 @@ class ModelRunner {
   
   
  private func modelUrl() -> URL? {
-    return userHome()
+    return NSBundle.mainBundle().URLForResource("ggml-model-f16", withExtension: "gguf")
       .appendingPathComponent("Github")
       .appendingPathComponent("llama")
       .appendingPathComponent("llama-2-7b-chat")
