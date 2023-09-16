@@ -17,8 +17,7 @@
 		4F36AE132AAFDF1A005BB95D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36AE122AAFDF1A005BB95D /* Item.swift */; };
 		4F36AE152AAFDF1B005BB95D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F36AE142AAFDF1B005BB95D /* Assets.xcassets */; };
 		4F36AE192AAFDF1B005BB95D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F36AE182AAFDF1B005BB95D /* Preview Assets.xcassets */; };
-		4F5139DD2AB671250040AE9F /* models in Resources */ = {isa = PBXBuildFile; fileRef = 4F5139DC2AB671250040AE9F /* models */; };
-		4F5139DF2AB671EB0040AE9F /* ggml-model-f16.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 4F5139DE2AB671EB0040AE9F /* ggml-model-f16.gguf */; };
+		4F5139E72AB672B50040AE9F /* llama-2-7b-chat.gguf in Resources */ = {isa = PBXBuildFile; fileRef = 4F5139E62AB672B50040AE9F /* llama-2-7b-chat.gguf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +33,7 @@
 		4F36AE162AAFDF1B005BB95D /* LlamaGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LlamaGPT.entitlements; sourceTree = "<group>"; };
 		4F36AE182AAFDF1B005BB95D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F36AE1A2AAFDF1B005BB95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F5139DC2AB671250040AE9F /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
-		4F5139DE2AB671EB0040AE9F /* ggml-model-f16.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ggml-model-f16.gguf"; sourceTree = "<group>"; };
+		4F5139E62AB672B50040AE9F /* llama-2-7b-chat.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "llama-2-7b-chat.gguf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +51,7 @@
 		4F36AE022AAFDF1A005BB95D = {
 			isa = PBXGroup;
 			children = (
-				4F5139DC2AB671250040AE9F /* models */,
-				4F5139DE2AB671EB0040AE9F /* ggml-model-f16.gguf */,
+				4F5139E52AB672960040AE9F /* models */,
 				4F36AE0D2AAFDF1A005BB95D /* LlamaGPT */,
 				4F36AE0C2AAFDF1A005BB95D /* Products */,
 			);
@@ -92,6 +89,14 @@
 				4F36AE182AAFDF1B005BB95D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F5139E52AB672960040AE9F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				4F5139E62AB672B50040AE9F /* llama-2-7b-chat.gguf */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,10 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5139E72AB672B50040AE9F /* llama-2-7b-chat.gguf in Resources */,
 				4F36AE192AAFDF1B005BB95D /* Preview Assets.xcassets in Resources */,
-				4F5139DF2AB671EB0040AE9F /* ggml-model-f16.gguf in Resources */,
 				4F36AE152AAFDF1B005BB95D /* Assets.xcassets in Resources */,
-				4F5139DD2AB671250040AE9F /* models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +311,7 @@
 				CODE_SIGN_ENTITLEMENTS = LlamaGPT/LlamaGPT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "LlamaGPT/Preview\\ Content models";
+				DEVELOPMENT_ASSET_PATHS = "LlamaGPT/Preview\\ Content models/llama-2-7b-chat.gguf";
 				DEVELOPMENT_TEAM = C28QWE5379;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -347,7 +351,7 @@
 				CODE_SIGN_ENTITLEMENTS = LlamaGPT/LlamaGPT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "LlamaGPT/Preview\\ Content models";
+				DEVELOPMENT_ASSET_PATHS = "LlamaGPT/Preview\\ Content models/llama-2-7b-chat.gguf";
 				DEVELOPMENT_TEAM = C28QWE5379;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
