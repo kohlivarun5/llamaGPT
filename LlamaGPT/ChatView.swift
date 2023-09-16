@@ -27,9 +27,14 @@ struct ChatView: View {
     }
     
     Task {
-      let stream = llama.run(prompt: content)
-      for try await token in stream {
-        self.response = self.response + token
+      do {
+        let stream = llama.run(prompt: content)
+        for try await token in stream {
+          self.response = self.response + token
+        }
+      } catch let error {
+        print("")
+        print("Failed to generate output:", error.localizedDescription)
       }
     }
   }

@@ -56,19 +56,31 @@ import llama
 class ModelRunner {
   private var modelRunner : LlamaRunner?
   
-  private func modelUrl() -> URL? {
+  private func userHomePath() -> String   {
+    let pw = getpwuid(getuid())
     
-    guard let pathString = Bundle.main.object(forInfoDictionaryKey: "LlamaModelPath") as? String else {
-      print("Model path not specified - define in MODEL_PATH")
-      exit(1)
+    if let home = pw?.pointee.pw_dir {
+      return FileManager.default.string(
+        withFileSystemRepresentation: home,
+        length: Int(strlen(home)))
     }
     
-    guard let url = URL(string: pathString), FileManager.default.fileExists(atPath: url.path) else {
-      print("Invalid model path, make sure this is a file URL")
-      exit(1)
-    }
-    
-    return url
+    fatalError()
+  }
+  
+  private func userHome() -> URL   {
+    URL(fileURLWithPath: userHomePath(), isDirectory: true)
+  }
+  
+  
+  
+ private func modelUrl() -> URL? {
+    return userHome()
+      .appendingPathComponent("Github")
+      .appendingPathComponent("llama")
+      .appendingPathComponent("llama-2-7b-chat")
+      .appendingPathComponent("ggml-model-f16.gguf")
+    // TODO : Make this from bundle
   }
   
   func run(prompt:String) -> AsyncThrowingStream<String, Error> {
@@ -79,7 +91,27 @@ class ModelRunner {
       self.modelRunner = LlamaRunner(modelURL: url)
       return self.run(prompt: prompt)
     case .some(let runner):
-      return runner.run(with:prompt)
+      return runner.run(with:prompt,stateChangeHandler: { state in
+        switch state {
+        case .notStarted:
+          print("notStarted")
+          break
+        case .initializing:
+          print("Initializing model... ", terminator: "")
+        case .generatingOutput:
+          print("Done.")
+          print("")
+          print("Generating output...")
+          print("\"", terminator: "")
+        case .completed:
+          print("\"")
+          print("")
+        case .failed:
+          print("failed")
+            // Handle this in the catch {}
+          break
+        }
+      })
     }
     
   }
