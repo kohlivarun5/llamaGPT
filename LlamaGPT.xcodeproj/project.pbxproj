@@ -11,6 +11,7 @@
 		4F303AA22AB146F300A7F4FF /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F303AA12AB146F300A7F4FF /* MessageView.swift */; };
 		4F303AA42AB14D2000A7F4FF /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F303AA32AB14D2000A7F4FF /* ChatView.swift */; };
 		4F303AA72AB1504000A7F4FF /* llama in Frameworks */ = {isa = PBXBuildFile; productRef = 4F303AA62AB1504000A7F4FF /* llama */; };
+		4F303AAB2AB64AB700A7F4FF /* llamacpp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F303AAA2AB64AB700A7F4FF /* llamacpp.swift */; };
 		4F36AE0F2AAFDF1A005BB95D /* LlamaGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36AE0E2AAFDF1A005BB95D /* LlamaGPTApp.swift */; };
 		4F36AE112AAFDF1A005BB95D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36AE102AAFDF1A005BB95D /* ContentView.swift */; };
 		4F36AE132AAFDF1A005BB95D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F36AE122AAFDF1A005BB95D /* Item.swift */; };
@@ -22,6 +23,7 @@
 		4F303A9F2AB1463B00A7F4FF /* ContentMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMessageView.swift; sourceTree = "<group>"; };
 		4F303AA12AB146F300A7F4FF /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		4F303AA32AB14D2000A7F4FF /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		4F303AAA2AB64AB700A7F4FF /* llamacpp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = llamacpp.swift; sourceTree = "<group>"; };
 		4F36AE0B2AAFDF1A005BB95D /* LlamaGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LlamaGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F36AE0E2AAFDF1A005BB95D /* LlamaGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaGPTApp.swift; sourceTree = "<group>"; };
 		4F36AE102AAFDF1A005BB95D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				4F303A9F2AB1463B00A7F4FF /* ContentMessageView.swift */,
 				4F303AA12AB146F300A7F4FF /* MessageView.swift */,
 				4F303AA32AB14D2000A7F4FF /* ChatView.swift */,
+				4F303AAA2AB64AB700A7F4FF /* llamacpp.swift */,
 			);
 			path = LlamaGPT;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F303AAB2AB64AB700A7F4FF /* llamacpp.swift in Sources */,
 				4F36AE112AAFDF1A005BB95D /* ContentView.swift in Sources */,
 				4F36AE132AAFDF1A005BB95D /* Item.swift in Sources */,
 				4F303AA02AB1463B00A7F4FF /* ContentMessageView.swift in Sources */,

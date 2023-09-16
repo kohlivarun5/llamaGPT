@@ -15,11 +15,22 @@ struct ChatView: View {
   
   @State var newPrompt: String = ""
   
+  @State var response: String = ""
+  
+  private var llama = ModelRunner()
+  
   private func onSubmit() {
     let content = self.newPrompt
     withAnimation {
       let newItem = Item(content: content, isPrompt: true)
       modelContext.insert(newItem)
+    }
+    
+    Task {
+      let stream = llama.run(prompt: content)
+      for try await token in stream {
+        self.response = self.response + token
+      }
     }
   }
   
@@ -33,6 +44,8 @@ struct ChatView: View {
         }
       }
       .listStyle(.plain)
+      
+      ContentMessageView(contentMessage: response, isPrompt:true)
       
       HStack {
         TextField(
